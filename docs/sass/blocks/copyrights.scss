@@ -1,0 +1,38 @@
+.copyrights {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $lato;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+  }
+}
+
+.copyrights__button {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: $text-color;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    column-gap: 23px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $button-color;
+  }
+
+  &:active {
+    color: $button-color;
+    opacity: 0.3;
+  }
+}
+
+.copyrights__text {
+  max-width: 200px;
+  color: $text-color;
+}

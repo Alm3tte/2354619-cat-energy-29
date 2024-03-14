@@ -1,0 +1,262 @@
+@mixin container {
+  padding: 0 20px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 0 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1440px;
+    padding: 0 110px;
+    margin: 0 auto;
+  }
+}
+
+@mixin container-hero {
+  padding: 0;
+
+  @media screen and (min-width: $tablet) {
+    padding: 0 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1440px;
+    padding: 0 110px;
+    margin: 0 auto;
+  }
+}
+
+@mixin hero-title {
+  font-size: 36px;
+  line-height: 36px;
+  font-family: $oswald;
+  color: $text-color2;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    color: $title-color;
+    text-align: left;
+  }
+}
+
+@mixin hero-subtitle {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $oswald;
+  text-transform: uppercase;
+  color: $text-color2;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    color: $title-color;
+    text-align: left;
+  }
+}
+
+@mixin all-content-title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: $title-color;
+  font-family: $oswald;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@mixin all-content-subtitle {
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-color;
+  font-family: $lato;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin cat-programs-title {
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  color: $title-color;
+  text-transform: uppercase;
+  font-family: $oswald;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@mixin cat-programs-subtitle {
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-color;
+  font-family: $lato;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+    color: $title-color;
+  }
+}
+
+@mixin button-main {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 44px;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 14px 26px;
+  }
+}
+
+@mixin form-title {
+  font-family: $oswald;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $title-color;
+  padding: 0;
+  margin: 0;
+  text-transform: initial;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@mixin form-desciption {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $text-color;
+  font-family: $oswald;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@mixin catalog-card {
+  font-size: 12px;
+  font-family: $lato;
+  font-weight: 400;
+  line-height: 16px;
+  color: $text-color;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@mixin catalog-title {
+  font-family: $oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $title-color;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@mixin catalog-subtitle {
+  font-family: $lato;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+@mixin button-state {
+  &:hover,
+  &:focus {
+    background-color: $btn-hover;
+    color: $text-color2;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $btn-hover;
+    color: $btn-color;
+  }
+}
+
+@mixin green-line {
+  position: relative;
+  margin: 30px 0 33px;
+  line-height: 1;
+  font-size: 24px;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 13px, $button-color 13px, $button-color 16px, transparent 16px, transparent 100%);
+
+  @media (min-width: $tablet) {
+    margin: 62px 0 75px;
+    padding: 0 calc((100vw - 708px) / 2);
+    font-size: 36px;
+    background-image: linear-gradient(to bottom, transparent 0, transparent 22px, $button-color 22px, $button-color 25px, transparent 25px, transparent 100%);
+  }
+
+  @media (min-width: $desktop) {
+    margin: 46px 0 60px;
+    padding: 0 calc((100vw - 1300px) / 2);
+  }
+}
+
+@mixin form {
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    padding: 0 110px;
+  }
+}

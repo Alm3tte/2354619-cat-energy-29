@@ -1,0 +1,106 @@
+.selection-button {
+  list-style: none;
+  margin: 0;
+  padding: 21px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  @media (min-width: $tablet) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 26px;
+    border: 1px solid $form-input;
+  }
+}
+
+.selection-button__item {
+  display: flex;
+  column-gap: 15px;
+}
+
+.selection-button__label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 7px 0 5px 45px;
+
+  @media (min-width: $tablet) {
+    padding: 5px 0 5px 60px;
+  }
+
+  &:hover {
+    border-color: $border-color;
+  }
+
+  &:focus {
+    outline: 2px solid $text-color;
+    border: none;
+  }
+
+  &:disabled {
+    border-color: $error;
+  }
+
+  &:focus-visible {
+    outline: solid 2px $example-slider;
+  }
+}
+
+.selection-button__span {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $border-color;
+  border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $border-radio;
+  }
+
+  &:disabled {
+    border: 1px solid $border-radio;
+    opacity: 0.3;
+  }
+}
+
+.selection-button__input[type="radio"]:checked + .selection-button__span::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-color: $button-color;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet) {
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover ~ span {
+    border-color: $example-slider;
+  }
+
+  &:focus-visible + span {
+    border-color: $example-slider;
+    outline: 1px solid $title-color;
+  }
+}
+
+.selection-button__input[type="radio"]:focus + .selection-button__span::before {
+  outline: solid 2px $example-slider;
+}

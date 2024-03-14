@@ -1,0 +1,98 @@
+.catalog-more {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  @media (min-width: $tablet) {
+    justify-content: flex-start;
+  }
+}
+
+.catalog-more__title {
+  @include catalog-title;
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet) {
+    max-width: 170px;
+    margin: 0 auto;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto 26px;
+  }
+}
+
+.catalog-more__subtitle {
+  @include catalog-subtitle;
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet) {
+    max-width: 220px;
+  }
+}
+
+.catalog-more__button {
+  max-width: 280px;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: $card-color;
+  color: $text-color;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: auto;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 37px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $catalog-border;
+  }
+}
+
+.catalog-more__icon {
+  border: 0;
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 25px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 47px;
+    margin-top: 49px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 37px;
+  }
+}
+
+.catalog-more__plus {
+  width: 30px;
+  height: 30px;
+  stroke-width: 3px;
+  color: $plus;
+  transition: color 0.3s ease;
+
+  @media (min-width: $tablet) {
+    width: 60px;
+    height: 60px;
+    stroke-width: 2px;
+  }
+
+  &:hover {
+    color: $button-color;
+  }
+}

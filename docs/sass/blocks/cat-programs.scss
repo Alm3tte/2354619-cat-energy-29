@@ -1,0 +1,249 @@
+.cat-programs {
+  @media (min-width: $tablet) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto;
+    margin-top: 82px;
+  }
+}
+
+.cat-programs__wrapper {
+  margin: 0 auto;
+
+  @media (min-width: $desktop) {
+    margin: 0 auto;
+    max-width: 1220px;
+  }
+}
+
+.cat-programs__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    row-gap: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+.cat-programs__item {
+  background-color: $card-color;
+  padding: 30px 20px 19px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 24px;
+    width: 50px;
+    height: 50px;
+    background-color: $button-color;
+    border-radius: 50%;
+
+    @media (min-width: $tablet) {
+      width: 200px;
+      height: 200px;
+      top: 93px;
+      left: auto;
+      right: 64px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding: 77px 52px 56px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 77px 42px 58px;
+  }
+}
+
+.cat-programs__item--slim::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/all-svg/index-cat-slim-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 35px;
+  height: 49px;
+  left: 27px;
+  top: 22px;
+
+  @media (min-width: $tablet) {
+    background-image: url("../img/all-svg/index-cat-slim-tablet.svg");
+    width: 140px;
+    height: 194px;
+    top: 81px;
+    left: auto;
+    right: 93px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 70px;
+    height: 100px;
+    top: 39px;
+    left: 67px;
+    background-image: url("../img/all-svg/index-cat-slim-desktop.svg");
+    right: 0;
+  }
+}
+
+.cat-programs__item--mass::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/all-svg/index-cat-mass-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 67px;
+  height: 28px;
+  left: 13px;
+  top: 37px;
+
+  @media (min-width: $tablet) {
+    background-image: url("../img/all-svg/index-cat-mass-tablet.svg");
+    width: 268px;
+    height: 112px;
+    top: 135px;
+    left: auto;
+    right: 29px;
+  }
+
+  @media (min-width: $desktop) {
+    background-image: url("../img/all-svg/index-cat-mass-desktop.svg");
+    width: 134px;
+    height: 56px;
+    top: 67px;
+    left: 33px;
+    right: 0;
+  }
+}
+
+.cat-programs__title {
+  @include cat-programs-title;
+  max-width: 400px;
+  padding-left: 70px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 51px;
+    margin-right: 20px;
+    padding-left: 172px;
+  }
+}
+
+.cat-programs__desciption {
+  @include cat-programs-subtitle;
+
+  padding-bottom: 21px;
+  padding-top: 30px;
+  border-bottom: 1px solid $border-line;
+
+  @media (min-width: $tablet) {
+    padding-top: 23px;
+    width: 340px;
+    border: none;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 10px;
+    width: auto;
+  }
+}
+
+.cat-programs__link {
+  color: $title-color;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  font-family: $oswald;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.cat-programs__button-container {
+  padding-top: 20px;
+
+  @media (min-width: $tablet) {
+    padding-top: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 3px;
+    padding-left: 10px;
+  }
+}
+
+.cat-programs__catalog {
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 121%;
+    width: 25px;
+    height: 12px;
+    background-image: url("../img/all-svg/icon-arrow.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    transition: all 0.1s linear;
+
+    @media (min-width: $tablet) {
+      top: 22%;
+      left: 127%;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      position: absolute;
+      background-image: url("../img/all-svg/icon-arrow-long.svg");
+      top: 25%;
+      left: 121%;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 12px;
+
+      @media (min-width: $tablet) {
+        top: 22%;
+        left: 127%;
+      }
+    }
+  }
+}

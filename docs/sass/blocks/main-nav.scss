@@ -1,0 +1,17 @@
+.main-nav {
+  font-size: 20px;
+  line-height: 20px;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 54px;
+    padding-bottom: 7px;
+  }
+}

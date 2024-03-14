@@ -1,0 +1,294 @@
+.form {
+  @include form-desciption;
+}
+
+.form__legend {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.form__wrapper-one {
+  @media (min-width: $desktop) {
+    @include form;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    align-items: center;
+  }
+}
+
+.form__main-container {
+  row-gap: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 71px;
+    row-gap: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
+}
+
+.form__fieldset {
+  border: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  padding: 0;
+
+  &--data {
+    @include form;
+    border-bottom: 1px solid $border-line;
+
+    @media (min-width: $tablet) {
+      border: 0;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.form__data-container {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+}
+
+.form__label {
+  white-space: nowrap;
+}
+
+.form__placeholder {
+  @include form-desciption;
+
+  padding: 12px 15px;
+  border: 1px solid $form-input;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    padding: 10px 21px;
+  }
+
+  &:hover {
+    border: 1px solid $border-color;
+  }
+
+  &:focus,
+  &:active {
+    outline: 2px solid $text-color;
+  }
+
+  &:invalid {
+    outline: 2px solid $error;
+  }
+}
+
+.form__title {
+  @include form-title;
+  @include green-line;
+}
+
+.form__span {
+  display: inline-block;
+  padding: 0 20px;
+  background-color: $bgcolor;
+  max-width: 230px;
+
+  @media (min-width: $tablet) {
+    max-width: max-content;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 39px;
+  }
+}
+
+.form__title-one {
+  margin: 27px 0 37px;
+
+  @media (min-width: $tablet) {
+    margin: 67px 0 74px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 70px 0 75px;
+  }
+}
+
+.form__title-two {
+  margin: 11px 0 38px;
+
+  @media (min-width: $tablet) {
+    margin-top: 44px;
+    margin-bottom: 87px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 69px;
+    margin-bottom: 78px;
+  }
+}
+
+.form__title-three {
+  margin-top: 23px;
+
+  @media (min-width: $tablet) {
+    margin-top: 58px;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 64px;
+    margin-bottom: 58px;
+  }
+}
+
+.form__personal-container {
+  @include form;
+  margin: 0;
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    margin: 0 auto;
+    padding: 0 72px 0 73px;
+  }
+}
+
+.form__host-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    width: 570px;
+  }
+}
+
+.form__input {
+  @include form-desciption;
+  padding: 13px 45px 13px 15px;
+  width: 100%;
+  border: 1px solid $form-input;
+
+  @media (min-width: $tablet) {
+    padding: 10px 45px 10px 20px;
+  }
+
+  &:hover {
+    border: 1px solid $border-color;
+  }
+
+  &:focus,
+  &:active {
+    outline: 2px solid $text-color;
+  }
+
+  &:invalid {
+    outline: 2px solid $error;
+  }
+}
+
+.form__svg {
+  position: absolute;
+  right: 11px;
+  display: block;
+  stroke: $title-color;
+
+  @media (min-width: $desktop) {
+    right: 16px;
+  }
+
+  &:hover {
+    stroke: $button-color;
+  }
+}
+
+.form__button {
+  @include button-main;
+  @include button-state;
+  padding: 10px 78px;
+  margin-top: 35px;
+
+  @media (min-width: $tablet) {
+    padding: 14px 65px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 14px 208px;
+  }
+}
+
+.form__required-fields {
+  color: $title-color;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $lato;
+  text-transform: initial;
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    margin-bottom: 4px;
+    margin-top: 0;
+  }
+}
+
+.form__textarea {
+  @include form-desciption;
+  padding: 14px 14px;
+  width: 100%;
+  min-height: 150px;
+  border: 1px solid $form-input;
+  resize: none;
+
+  @media (min-width: $tablet) {
+    padding: 8px 19px;
+    min-height: 175px;
+    width: 626px;
+  }
+
+  &::placeholder {
+    color: $text-color;
+    opacity: 1;
+  }
+
+  &:hover {
+    border: 1px solid $border-color;
+  }
+
+  &:focus,
+  &:active {
+    outline: 2px solid $text-color;
+  }
+
+  &:invalid {
+    outline: 2px solid $error;
+  }
+}
+
+.form__textarea-container {
+  @include form;
+  width: 100%;
+}
