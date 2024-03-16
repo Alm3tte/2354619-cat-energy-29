@@ -1,7 +1,7 @@
 .promo {
   text-align: center;
   margin: 35px 0;
-  background-image: url("/img/catalog-promo-mobile@1x.jpg");
+  background-image: url("../img/catalog-promo-mobile@1x.jpg");
   background-repeat: no-repeat;
   min-height: 289px;
   background-size: cover;
@@ -13,7 +13,7 @@
   justify-content: space-around;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url("/img/catalog-promo-mobile@2x.jpg");
+    background-image: url("../img/catalog-promo-mobile@2x.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -21,7 +21,7 @@
   @media (min-width: $tablet) {
     padding-top: 0;
     min-height: 200px;
-    background-image: url("/img/catalog-promo-tablet@1x.jpg");
+    background-image: url("../img/catalog-promo-tablet@1x.jpg");
     background-size: cover;
     background-position: center;
     width: 707px;
@@ -32,11 +32,11 @@
 
 
   @media (min-width: $tablet) and (min-resolution: 1.5dppx), (min-width: $tablet) and (min-resolution: 144dpi) {
-    background-image: url("/img/catalog-promo-tablet@2x.jpg");
+    background-image: url("../img/catalog-promo-tablet@2x.jpg");
   }
 
   @media (min-width: $desktop) {
-    background-image: url("/img/catalog-promo-desktop@1x.jpg");
+    background-image: url("../img/catalog-promo-desktop@1x.jpg");
     width: 245px;
     height: 288px;
     background-size: cover;
@@ -46,7 +46,7 @@
   }
 
   @media (min-width: $desktop) and (min-resolution: 1.5dppx), (min-width: $desktop) and (min-resolution: 144dpi) {
-    background-image: url("/img/catalog-promo-desktop@2x.jpg");
+    background-image: url("../img/catalog-promo-desktop@2x.jpg");
   }
 }
 
